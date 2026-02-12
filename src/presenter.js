@@ -5,7 +5,7 @@ const first = document.querySelector("#primer-numero");
 const second = document.querySelector("#segundo-numero");
 const form = document.querySelector("#sumar-form");
 const div = document.querySelector("#resultado-div");
-const btnMultiplicar = document.querySelector("#btn-multiplicar");
+const btnMultiplicar = document.querySelector("#multiplicar-button");
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
