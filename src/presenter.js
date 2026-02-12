@@ -1,5 +1,5 @@
 import sumar from "./sumador";
-import multiplicar from "./multiplicar";
+import multiplicar from "./multiplicador";
 
 const first = document.querySelector("#primer-numero");
 const second = document.querySelector("#segundo-numero");
