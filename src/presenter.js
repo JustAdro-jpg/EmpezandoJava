@@ -1,24 +1,26 @@
-import sumar from "./sumador";
-import multiplicar from "./multiplicador";
+import saludar from "./saludador";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const form = document.querySelector("#saludar-form");
+const nombre = document.querySelector("#nombre");
+const edad = document.querySelector("#edad");
+const genero = document.querySelector("#genero");
+const idioma = document.querySelector("#idioma");
 const div = document.querySelector("#resultado-div");
-const btnMultiplicar = document.querySelector("#multiplicar-button");
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const firstNumber = Number.parseInt(first.value);
-    const secondNumber = Number.parseInt(second.value);
+    const nombreValor = nombre.value;
+    const edadValor = Number.parseInt(edad.value);
+    const generoValor = genero.value;
+    const idiomaValor = idioma.value;
 
-    div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
-});
+    const mensaje = saludar(
+        nombreValor,
+        edadValor,
+        generoValor,
+        idiomaValor
+    );
 
-btnMultiplicar.addEventListener("click", () => {
-    const firstNumber = Number.parseInt(first.value);
-    const secondNumber = Number.parseInt(second.value);
-
-    div.innerHTML = "<p>" + multiplicar(firstNumber, secondNumber) + "</p>";
+    div.innerHTML = `<p>${mensaje}</p>`;
 });
